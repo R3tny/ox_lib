@@ -1,5 +1,5 @@
 # last update: 05.07.2024
-# ox_lib Redesign by mur4i
+# ox_lib Redesign by retny
 A few changes redesign for overextened context menu, font changes, theme and colors.
 Download the release if you want to use.
 
