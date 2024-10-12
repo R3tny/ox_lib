@@ -1,40 +1,4 @@
-# last update: 05.07.2024
-# ox_lib Redesign by retny
-A few changes redesign for overextened context menu, font changes, theme and colors.
-Download the release if you want to use.
 
-
-Added new features:
-- Add new Context menu description
-- Add new Background convar (ox.cfg)
-```setr ox:menuBackground false #true forces background on every context menu from ox_lib```
-- Add new Background color option
-
-Example of use:
-```lua
-            lib.registerContext({
-                id = 'test',
-                title = 'title from menu',
-                ---------------------------------- NEW OPTIONS BELOW
-                description = 'description from menu', --new line description on menu
-                background = true, --TOGGLE background for only this menu (you can change default to setr ox:menuBackground true)
-                backgroundColor = '#ffffff', --change the background color
-                [...]
-            }) 
-```
-
-Changes only on: //resource/interface/client/context.lua
-```lua
-        data = {
-            title = data.title,
-            description = data.description, --murai
-            background = data.background or GetConvarInt('ox:menuBackground', 0) == 1, --murai
-            backgroundColor = data.backgroundColor, --murai
-            canClose = data.canClose,
-            menu = data.menu,
-            options = data.options
-        }
-```
 Preview:
 ![](https://cdn.discordapp.com/attachments/1287111536581808138/1287132626687099013/image.png?ex=670b75eb&is=670a246b&hm=370a91b52508388ca89b6b5613a1e9bedbecd852be19ed68ca99433ddbedee0a&)
 ![](https://cdn.discordapp.com/attachments/1287111536581808138/1287131833498210414/image.png?ex=670b752e&is=670a23ae&hm=ebb3cdca17036ce6f9500c95727bcd2d56ecf87d0d71fd2d82fa02c9219f6812&)
